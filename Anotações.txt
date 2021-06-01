@@ -1,0 +1,21 @@
+Adicionando typescript ao projeto com next
+
+yarn add typescript @types/react @types/node -D
+
+Instalar sass 
+
+yarn add sass
+
+pra usar css num projeto next deve-se utilizar no arquivo css o module
+
+ex.: 'home.module.css'
+
+e na hora da importação, deve-se atribuir um nome pra importação
+
+ex.: "import style from 'home.module.css'"
+
+cada componente que for ser estilizado deve ter uma className ou id
+seguido pelo nome da importação em {}, a criação do nome da classe
+fica no arquivo css
+
+ex.: className={style.title}
