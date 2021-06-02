@@ -1,0 +1,39 @@
+O arquivo _app.tsx fica por volta de toda a aplicação, portanto se quiser
+que algo sempre apareça na tela deve-se adicionar no _app.tsx que ele vai
+carregar do 0 toda vez que atualizar a tela.
+
+O _document ele vai funcionar parecido com o index.html da aplicação create react-app
+
+Criando _document
+
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class MyDocument extends Document {
+    render() {
+        return (
+            <Html>
+                <Head>
+                    <title>Document</title>
+                </Head>
+                <Body>
+                    <Main />
+                    <NextScript />
+                </Body>
+            </Html>
+        )
+    }
+}
+
+Para usar o title de forma dinamica é só importar o Head no respectivo arquivo
+
+ex.: 
+
+...
+import Head from 'next/head';
+...
+<>
+<Head> 
+    <title>titulo</title>
+</Head>
+...
+</>
